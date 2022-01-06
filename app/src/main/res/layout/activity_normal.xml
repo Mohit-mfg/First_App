@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7E85C36F"
+    tools:context=".Normal">
+
+    <TextView
+        android:layout_margin="5dp"
+        android:id="@+id/tv_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Normal weight according to BMI "
+        android:textSize="25sp">
+    </TextView>
+    <TextView
+        android:layout_margin="10dp"
+        android:layout_below="@+id/tv_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="italic"
+        android:textColor="@color/black"
+        android:text=" Normal weight is the desired or optimal weight of a person. It depends on age and gender. You have reason to rejoice when your body mass index as a woman is between 19 and 24 and between 20 and 25 for a man, respectively. This means that your weight and your height are in harmony. In terms of your diet and health, you have largely made the right decisions. A balanced diet and enough exercise will help you maintain your ideal weight.
+If you already do a lot of sports, are in shape, and have a high percentage of muscle mass, it is possible that your calculated BMI falls into the group of overweight. In this case, it is better to focus on the percentage of body fat. Targeting your body fat percentage is also helpful at a normal weight. Overweight women and men can lose weight relatively quickly in the form of water excreted from the body with express diets. But weight loss can also occur with muscle loss. This can have negative consequences when too little body fat is broken down at the same time When you lose weight, you should first of all be careful to maintain or increase your muscle mass and, at best, to break down fat."
+        android:textSize="20sp">
+    </TextView>
+</RelativeLayout>

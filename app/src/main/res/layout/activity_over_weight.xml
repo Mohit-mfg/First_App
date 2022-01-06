@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#BADFD364"
+    tools:context=".Normal">
+
+    <TextView
+        android:id="@+id/tv_1"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Overweight according to BMI  "
+        android:textSize="25sp">
+    </TextView>
+    <TextView
+        android:layout_margin="10dp"
+        android:layout_below="@+id/tv_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="italic"
+        android:textColor="@color/black"
+        android:text="Overweight is divided into three stages: overweight (BMI in women is between 24 and 30, and in men - between 25 and 30), obesity (BMI in men and women is between 30 and 40), and severe obesity (BMI). in men and women it is over 40). To get a better idea of the type of your overweight, you should consult your doctor. Along with it, analyze the composition of your body by the percentage of fat, muscle and water.
+Overweight calculated by BMI does not necessarily mean that it is unhealthy or that the body is out of shape. Both men and women who train strength sports and have a high percentage of muscle mass can, as we have already explained in the section on normal weight, fall into the group of overweight.  "
+        android:textSize="20sp">
+    </TextView>
+</RelativeLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="@string/bmi_explain"
+        android:id="@+id/bmi_explain_id" />
+    <item
+        android:title="@string/bmi_chart"
+        android:id="@+id/bmi_chart_id" />
+    <item
+        android:title="@string/help"
+        android:id="@+id/help_id" />
+</menu>

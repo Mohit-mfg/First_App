@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">BMI Calculator</string>
+    <string name="submit">Submit</string>
+    <string name="result">Result</string>
+    <string name="under_weight"><![CDATA[< 18.5]]></string>
+    <string name="bmi_explain">BMI Explain</string>
+    <string name="bmi_chart">BMI Chart</string>
+    <string name="help">Help</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="under_wight">Under Wight</string>
+    <string name="normal">Normal</string>
+    <string name="obese">Obese</string>
+    <string name="over_weight">Over Weight</string>
+</resources>

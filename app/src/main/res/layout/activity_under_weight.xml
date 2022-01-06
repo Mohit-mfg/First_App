@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CBAAD4F4"
+    tools:context=".Normal">
+
+    <TextView
+        android:layout_margin="5dp"
+        android:id="@+id/tv_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Underweight according to BMI  "
+        android:textSize="25sp">
+    </TextView>
+    <TextView
+        android:layout_margin="10dp"
+        android:layout_below="@+id/tv_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="italic"
+        android:textColor="@color/black"
+        android:text=" Being underweight is just as unhealthy for the human body as being overweight. Women are underweight if their BMI is below 19, and men are under 20. The reasons for being underweight can be different. If it is caused by voluntary deprivation of food (anorexia) or forced vomiting (bulimia), you may need to consult a doctor. These eating disorders affect both men and women of all ages. In many cases, help from the social environment and professionals is needed to change eating habits and perceptions.
+Other causes of underweight include metabolic diseases, such as hyperthyroidism or diabetes, inflammatory bowel disease, such as Crohn's disease, food intolerances, or liver disease. Mental factors, such as stress, can also lead to decreased appetite and subsequently underweight.
+"
+        android:textSize="20sp">
+    </TextView>
+</RelativeLayout>

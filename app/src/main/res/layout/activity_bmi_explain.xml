@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E6C7BD"
+    tools:context=".BMI_Explain">
+
+    <LinearLayout
+        android:id="@+id/ll_1"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        >
+
+        <Button
+
+            android:background="#DA529EDA"
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/btn_under_weight"
+            android:text="@string/under_wight"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/btn_text_size"></Button>
+        <Button
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/btn_normal"
+            android:text="@string/normal"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:background="#4CAF50"
+            android:textSize="@dimen/btn_text_size"></Button>
+        ></LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_2"
+            android:layout_below="@id/ll_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+        <Button
+            android:layout_margin="10dp"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/btn_Over_weight"
+            android:text="@string/over_weight"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:background="#FFC107"
+            android:textSize="@dimen/btn_text_size"></Button>
+        <Button
+            android:layout_margin="10dp"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/btn_obese"
+            android:text="@string/obese"
+            android:textColor="@color/white"
+            android:background="#ED0808"
+            android:textStyle="bold"
+            android:textSize="@dimen/btn_text_size"></Button>
+
+    </LinearLayout>
+<LinearLayout
+    android:layout_below="@+id/ll_2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TextView
+        android:layout_margin="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:text="Measurement Units	is Kilograms and meters (or centimeters)"
+        android:textStyle="bold"></TextView>
+
+    <TextView
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Formula: weight (kg) / [height (m)]2
+With the metric system, the formula for BMI is weight in kilograms divided by height in meters squared. Because height is commonly measured in centimeters, divide height in centimeters by 100 to obtain height in meters.
+
+Example: Weight = 68 kg, Height = 165 cm (1.65 m)
+Calculation: 68 ÷ (1.65)2 = 24.98"
+        android:textSize="20sp"
+        android:textStyle="bold"></TextView>
+
+</LinearLayout>
+</RelativeLayout>
