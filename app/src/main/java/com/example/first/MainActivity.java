@@ -3,6 +3,7 @@ package com.example.first;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +12,8 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -60,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
             public void onClick(View view) {
 
 
-
+                hideSoftKeyboard(view);
 
 
                 if(et_height.getText().toString().isEmpty()){
@@ -101,9 +104,16 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
                     tv_Result.setVisibility(View.VISIBLE);
 
                     tv_show_details.setVisibility(View.VISIBLE);
+
+
+
+
+
+
                 }
             }
         });
+
 
 
 
@@ -146,7 +156,8 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
 //                Toast.makeText(MainActivity.this, "Graph", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.help_id:
-                Toast.makeText(MainActivity.this, "Help", Toast.LENGTH_SHORT).show();
+                Intent intent_3=new Intent(context,Help.class);
+                startActivity(intent_3);
                 break;
         }
         return super.onOptionsItemSelected(item);
@@ -192,9 +203,23 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
             check=1;
         }
 
+        hideSoftKeyboard(this.getCurrentFocus());
+
         gender=radioButton.getText().toString();
         Toast.makeText(context, radioButton.getText().toString(), Toast.LENGTH_SHORT).show();
 
 
+    }
+    public void hideSoftKeyboard(View view) {
+        if (view == null) {
+            view = this.getCurrentFocus();
+        }
+        InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
+        if (inputMethodManager != null) {
+            if (view != null) {
+                inputMethodManager.hideSoftInputFromWindow(view.getWindowToken(), 0);
+            }
+        }
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
     }
 }

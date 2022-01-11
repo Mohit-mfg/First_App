@@ -74,23 +74,33 @@
             android:textSize="@dimen/btn_text_size"></Button>
 
     </LinearLayout>
+
+    <ScrollView
+        android:layout_below="@id/ll_2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
 <LinearLayout
-    android:layout_below="@+id/ll_2"
+    android:id="@+id/ll3"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="vertical">
     <TextView
+        android:id="@+id/tv_text_id_1"
         android:layout_margin="20sp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:textSize="22sp"
         android:text="Measurement Units	is Kilograms and meters (or centimeters)"
         android:textStyle="bold"></TextView>
 
     <TextView
+        android:id="@+id/tv_text_id_2"
+
         android:layout_margin="10dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:text="Formula: weight (kg) / [height (m)]2
 With the metric system, the formula for BMI is weight in kilograms divided by height in meters squared. Because height is commonly measured in centimeters, divide height in centimeters by 100 to obtain height in meters.
 
@@ -100,4 +110,5 @@ Calculation: 68 ÷ (1.65)2 = 24.98"
         android:textStyle="bold"></TextView>
 
 </LinearLayout>
+    </ScrollView>
 </RelativeLayout>
