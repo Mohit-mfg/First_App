@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ccc"
+    tools:context=".Help">
+
+    <LinearLayout
+        android:layout_marginTop="25dp"
+        android:id="@+id/ll_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_alignParentTop="true">
+
+
+        <Button
+            android:layout_margin="20dp"
+            android:id="@+id/dial_id"
+            android:layout_weight="1"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dial"
+            android:textSize="@dimen/btn_text_size"
+            android:textColor="@color/black"
+            android:background="@color/teal_200"/>
+
+        <Button
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+
+            android:id="@+id/emai_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textSize="@dimen/btn_text_size"
+            android:textColor="@color/black"
+            android:background="@color/teal_200"/>
+
+        <Button
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:id="@+id/about_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="About App"
+            android:textSize="@dimen/btn_text_size"
+            android:textColor="@color/black"
+            android:background="@color/teal_200"/>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/ll_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_1"
+        android:orientation="vertical"
+        android:layout_margin="20dp"
+        >
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/et_mt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+
+
+
+        <EditText
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="enter no"
+            android:id="@+id/et_dial_id"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:inputType="number"
+            android:padding="5dp"
+
+            ></EditText>
+
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+
+            android:layout_margin="20dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="call"
+            android:id="@+id/call_id"
+            android:textSize="@dimen/btn_text_size"
+            android:textColor="@color/white"
+            android:background="@color/purple_500"/>
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/ll__3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_1"
+        android:orientation="vertical"
+        android:layout_margin="20dp"
+        >
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/et_mt_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+
+
+
+            <EditText
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="emaid id"
+                android:id="@+id/et_email_id"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:padding="5dp"
+
+                ></EditText>
+
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/et_mt_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+
+
+
+            <EditText
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="subject"
+                android:id="@+id/et_subject_id"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:padding="5dp"
+
+                ></EditText>
+
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/et_mt_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+
+
+
+            <EditText
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:hint="Message"
+                android:id="@+id/et_message_id"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:gravity="top"
+                android:padding="5dp"
+
+                ></EditText>
+
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+
+            android:layout_margin="20dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="send"
+            android:id="@+id/send_id"
+            android:textSize="@dimen/btn_text_size"
+            android:textColor="@color/white"
+            android:background="@color/purple_500"/>
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>
