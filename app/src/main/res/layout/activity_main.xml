@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#956D8598"
+    android:id="@+id/relative_layout_id"
     tools:context=".MainActivity">
 
     <TextView
@@ -20,111 +21,31 @@
         android:textStyle="bold"></TextView>
 
     <RelativeLayout
-        android:layout_centerInParent="true"
         android:id="@+id/rl_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+
+        android:layout_centerInParent="true"
         android:background="#ccc">
 
-        <LinearLayout
-            android:id="@+id/ll_1"
-            android:layout_marginTop="40dp"
+        <Spinner
+            android:id="@+id/spiner_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Height"
-                android:textSize="@dimen/text_size"
-                android:textStyle="bold"></TextView>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/et_mt"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp">
-
-                <EditText
-                    android:padding="3dp"
-                    android:id="@+id/et_height"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="@color/white"
-                    android:hint="Enter Height in cm"
-                    android:inputType="numberDecimal"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/text_size"
-                    android:textStyle="bold">
-
-                </EditText>
-            </com.google.android.material.textfield.TextInputLayout>
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/ll_2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/ll_1"
-            android:layout_marginLeft="20dp"
-            android:orientation="horizontal">
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Weight"
-                android:textSize="@dimen/text_size"
-                android:textStyle="bold"></TextView>
-
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/et_mt_2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/et_mt"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-
-                >
-
-                <EditText
-                    android:padding="3dp"
-                    android:id="@+id/et_weight"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="@color/white"
-                    android:hint="Enter Weight in Kg"
-                    android:inputType="numberDecimal"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/text_size"
-                    android:textStyle="bold">
-
-                </EditText>
-            </com.google.android.material.textfield.TextInputLayout>
-        </LinearLayout>
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/white" />
 
         <LinearLayout
             android:id="@+id/ll_3"
-            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/ll_2"
+            android:layout_below="@id/spiner_id"
+
             android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
             android:orientation="horizontal">
 
             <RadioGroup
@@ -138,41 +59,292 @@
                 android:weightSum="2">
 
                 <RadioButton
-                    android:textSize="18sp"
                     android:id="@+id/male_id"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/male" />
+                    android:text="@string/male"
+                    android:textSize="18sp" />
 
                 <RadioButton
-                    android:textSize="18sp"
                     android:id="@+id/female"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/female" />
+                    android:text="@string/female"
+                    android:textSize="18sp" />
 
 
             </RadioGroup>
         </LinearLayout>
 
 
+        <LinearLayout
+
+            android:id="@+id/main_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_3"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+
+                android:id="@+id/metric_uinit_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+
+                <LinearLayout
+                    android:id="@+id/ll_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="40dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Height"
+                        android:textSize="@dimen/text_size"
+                        android:textStyle="bold"></TextView>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/et_mt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp">
+
+                        <EditText
+                            android:id="@+id/et_height"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@color/white"
+                            android:hint="Enter Height in cm"
+                            android:inputType="numberDecimal"
+                            android:padding="3dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size"
+                            android:textStyle="bold">
+
+                        </EditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_1"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Weight"
+                        android:textSize="@dimen/text_size"
+                        android:textStyle="bold"></TextView>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/et_mt_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/et_mt"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+
+                        >
+
+                        <EditText
+                            android:id="@+id/et_weight"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@color/white"
+                            android:hint="Enter Weight in Kg"
+                            android:inputType="numberDecimal"
+                            android:padding="3dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size"
+                            android:textStyle="bold">
+
+                        </EditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:id="@+id/us_uinit_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+
+                <LinearLayout
+
+                    android:id="@+id/ll_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="40dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Height"
+                        android:textSize="@dimen/text_size"
+                        android:textStyle="bold"></TextView>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/et_mt_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1">
+
+                        <EditText
+                            android:id="@+id/et_feet_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:hint="Feet "
+                            android:inputType="numberDecimal"
+                            android:padding="3dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size"
+                            android:textStyle="bold">
+
+                        </EditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!--                    <com.google.android.material.textfield.TextInputLayout-->
+                    <!--                        android:id="@+id/et_mt_3"-->
+                    <!--                        android:layout_width="wrap_content"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_marginLeft="1dp"-->
+                    <!--                        android:layout_marginRight="20dp"-->
+                    <!--                        android:layout_weight="1">-->
+
+                    <!--                        <EditText-->
+                    <!--                            android:id="@+id/et_inch_id"-->
+                    <!--                            android:layout_width="match_parent"-->
+                    <!--                            android:layout_height="wrap_content"-->
+                    <!--                            android:layout_marginStart="10dp"-->
+                    <!--                            android:layout_marginTop="10dp"-->
+                    <!--                            android:layout_marginEnd="10dp"-->
+                    <!--                            android:layout_marginBottom="10dp"-->
+                    <!--                            android:layout_weight="1"-->
+                    <!--                            android:background="@color/white"-->
+                    <!--                            android:hint="Inch"-->
+                    <!--                            android:inputType="numberDecimal"-->
+                    <!--                            android:padding="3dp"-->
+                    <!--                            android:textColor="@color/black"-->
+                    <!--                            android:textSize="@dimen/text_size"-->
+                    <!--                            android:textStyle="bold">-->
+
+                    <!--                        </EditText>-->
+                    <!--                    </com.google.android.material.textfield.TextInputLayout>-->
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+
+                    android:layout_marginLeft="20dp"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Weight"
+                        android:textSize="@dimen/text_size"
+                        android:textStyle="bold"></TextView>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/et_mt_4"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/et_mt"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+
+                        >
+
+                        <EditText
+                            android:id="@+id/et_pound_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@color/white"
+                            android:hint="Pound"
+                            android:inputType="numberDecimal"
+                            android:padding="3dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size"
+                            android:textStyle="bold">
+
+                        </EditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
         <Button
+
             android:id="@+id/btn_submit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/ll_3"
+            android:layout_below="@+id/main_ll"
             android:layout_centerHorizontal="true"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="10dp"
+            android:layout_marginTop="37dp"
             android:layout_marginBottom="10dp"
             android:background="#EB2BAC30"
             android:text="@string/submit"
             android:textColor="@color/black"
             android:textSize="18sp" />
-
 
         <TextView
             android:id="@+id/tv_result"
@@ -207,6 +379,8 @@
             android:textColor="@color/black"
             android:textSize="12sp"
             android:visibility="gone" />
+
+
     </RelativeLayout>
 <!--    <LinearLayout-->
 <!--        android:id="@+id/l1"-->

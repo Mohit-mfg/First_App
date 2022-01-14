@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0C0C0C"
+    tools:context=".Splash">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="35sp"
+        android:text="Bmi Calculator"
+        android:textColor="#F30A0A"
+        android:textStyle="bold"
+        android:fontFamily="casual"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"/>
+
+    <ProgressBar
+
+
+        android:layout_above="@+id/tv_please_wait_id"
+        android:id="@+id/progress_bar_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="false"
+        android:layout_marginBottom="50dp"
+        />
+    <TextView
+        android:layout_marginBottom="20dp"
+        android:id="@+id/tv_please_wait_id"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please wait..."
+        android:textSize="15sp"
+
+        android:textColor="@color/white"/>
+
+
+</RelativeLayout>

@@ -1,10 +1,10 @@
 package com.example.first;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.first.databinding.ActivityMain2Binding;
 
@@ -19,10 +19,20 @@ String height,weight,gender,result;
         setContentView(binding.getRoot());
 
         Intent intent=getIntent();
+        int s_check=Integer.valueOf(intent.getStringExtra("s_check"));
+        if(s_check==0){
         binding.heightId.setText((intent.getStringExtra("height"))+" cm");
         binding.weightId.setText((intent.getStringExtra("weight"))+" kg");
         binding.bmiResult.setText(intent.getStringExtra("str_result"));
         binding.genderId.setText(intent.getStringExtra("gender"));
+        }
+        else if(s_check==1){
+            binding.heightId.setText((intent.getStringExtra("feet"))+" feet");
+            binding.weightId.setText((intent.getStringExtra("pound"))+" pound");
+            binding.bmiResult.setText(intent.getStringExtra("str_result"));
+            binding.genderId.setText(intent.getStringExtra("gender"));
+
+        }
 
 
 

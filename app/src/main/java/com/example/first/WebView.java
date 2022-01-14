@@ -33,7 +33,7 @@ public class WebView extends AppCompatActivity {
         progressDialog.setCancelable(false);
         progressDialog.show();
 
-        binding.webId.loadUrl("https://www.instagram.com/");
+        binding.webId.loadUrl("https://www.instagram.com");
         binding.webId.setWebViewClient(new MyWebViewClient());
     }
 

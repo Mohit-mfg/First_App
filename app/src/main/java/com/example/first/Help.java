@@ -1,10 +1,5 @@
 package com.example.first;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-
 import android.Manifest;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -14,6 +9,11 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import com.example.first.databinding.ActivityHelpBinding;
 
@@ -52,15 +52,18 @@ public class Help extends AppCompatActivity {
 //
 //                startActivity(Intent.createChooser(email, "Choose an Email client :"));
 
-//                Intent email = new Intent(Intent.ACTION_SEND);
-//                email.putExtra(Intent.EXTRA_EMAIL, new String[]{ to});
-//                email.putExtra(Intent.EXTRA_SUBJECT, subject);
-//                email.putExtra(Intent.EXTRA_TEXT, message);
+//                Intent email = new Intent(Intent.ACTION_SENDTO);
+//                email.setData(Uri.parse("mailto:"));
+//                email.putExtra(Intent.EXTRA_EMAIL, new String[]{"kumarakesharma@gmail.com"});
+//                email.putExtra(Intent.EXTRA_SUBJECT, "Implememntation testing");
+//                email.putExtra(Intent.EXTRA_TEXT, "This is for implementation testing");
 //
-//                //need this to prompts email client only
-//                email.setType("message/rfc822");
-//
-//                startActivity(Intent.createChooser(email, "Choose an Email client :"));
+////                //need this to prompts email client only
+////                email.setType("message/rfc822");
+////
+//                if (email.resolveActivity(getPackageManager()) != null) {
+//                    startActivity(email);
+//                }
 
             }
         });
@@ -145,6 +148,9 @@ public class Help extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+
+                email();
+
 //                Intent email = new Intent(Intent.ACTION_SEND);
 //                email.putExtra(Intent.EXTRA_EMAIL, new String[]{ binding.etEmailId.getText().toString()});
 //                email.putExtra(Intent.EXTRA_SUBJECT, binding.etSubjectId.getText().toString());
@@ -160,19 +166,61 @@ public class Help extends AppCompatActivity {
 
 
 //                public void composeEmail(String[] addresses, String subject) {
-                    Intent intent = new Intent(Intent.ACTION_SENDTO);
-                    intent.setData(Uri.parse("mailto:"));
-                    intent.putExtra(Intent.EXTRA_EMAIL, binding.etEmailId.getText().toString());
-                    intent.putExtra(Intent.EXTRA_SUBJECT, binding.etSubjectId.getText().toString());
-                    intent.putExtra(Intent.EXTRA_TEXT, binding.etMessageId.getText().toString());
-                    if (intent.resolveActivity(getPackageManager()) != null) {
-                        startActivity(intent);
-                    }
+//                    Intent intent = new Intent(Intent.ACTION_SENDTO);
+//                    intent.setData(Uri.parse("mailto:"));
+//                    intent.putExtra(Intent.EXTRA_EMAIL, binding.etEmailId.getText().toString());
+//                    intent.putExtra(Intent.EXTRA_SUBJECT, binding.etSubjectId.getText().toString());
+//                    intent.putExtra(Intent.EXTRA_TEXT, binding.etMessageId.getText().toString());
+//                    if (intent.resolveActivity(getPackageManager()) != null) {
+//                        startActivity(intent);
+//                    }
+
+
+
+
+
+
+//               String mail =  "mailto:" +binding.etEmailId.getText().toString() +
+////                        "?cc=" + "rakesh@axisbank.com" +
+//                        "&subject=" + Uri.encode(binding.etSubjectId.getText().toString()) +
+//                        "&body=" + Uri.encode(binding.etMessageId.getText().toString());
+
+
+
+
+//                Intent email = new Intent(Intent.ACTION_SENDTO);
+//                email.setData(Uri.parse("mailto:"));
+////                email.setData(Uri.parse(mail));
+////                email.putExtra(Intent.EXTRA_EMAIL, new String[]{"kumarakesharma@gmail.com"});
+//                email.putExtra(Intent.EXTRA_EMAIL, new String[]{binding.etEmailId.getText().toString()});
+////                email.putExtra(Intent.EXTRA_SUBJECT, "Implememntation testing");
+//                email.putExtra(Intent.EXTRA_SUBJECT, binding.etSubjectId.getText().toString());
+////                email.putExtra(Intent.EXTRA_TEXT, "This is for implementation testing");
+//                email.putExtra(Intent.EXTRA_TEXT, binding.etMessageId.getText().toString());
+//
+////                //need this to prompts email client only
+////                email.setType("message/rfc822");
+////
+//                if (email.resolveActivity(getPackageManager()) != null) {
+//                    startActivity(email);
+//                }
 //                }
 
 
             }
         });
+
+
+    }
+
+
+    public void email(){
+        Intent email = new Intent(Intent.ACTION_SENDTO);
+        email.setData(Uri.parse("mailto:"));
+        email.putExtra(Intent.EXTRA_EMAIL, new String[]{binding.etEmailId.getText().toString()});
+        email.putExtra(Intent.EXTRA_SUBJECT, binding.etSubjectId.getText().toString());
+        email.putExtra(Intent.EXTRA_TEXT, binding.etMessageId.getText().toString());
+        startActivity(email);
 
 
     }

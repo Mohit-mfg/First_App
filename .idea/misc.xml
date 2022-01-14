@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/mohit/AndroidStudioProjects/First/app/src/main/res/drawable/ic_profile.xml" value="0.2703125" />
         <entry key="..\:/Users/mohit/AndroidStudioProjects/First/app/src/main/res/layout/activity_bmi_chart.xml" value="0.2504528985507246" />
         <entry key="..\:/Users/mohit/AndroidStudioProjects/First/app/src/main/res/layout/activity_bmi_explain.xml" value="0.2504528985507246" />
         <entry key="..\:/Users/mohit/AndroidStudioProjects/First/app/src/main/res/layout/activity_help.xml" value="0.25416666666666665" />
@@ -11,7 +12,11 @@
         <entry key="..\:/Users/mohit/AndroidStudioProjects/First/app/src/main/res/layout/activity_normal.xml" value="0.2463768115942029" />
         <entry key="..\:/Users/mohit/AndroidStudioProjects/First/app/src/main/res/layout/activity_obese.xml" value="0.2463768115942029" />
         <entry key="..\:/Users/mohit/AndroidStudioProjects/First/app/src/main/res/layout/activity_over_weight.xml" value="0.2463768115942029" />
+        <entry key="..\:/Users/mohit/AndroidStudioProjects/First/app/src/main/res/layout/activity_profile.xml" value="0.24010416666666667" />
+        <entry key="..\:/Users/mohit/AndroidStudioProjects/First/app/src/main/res/layout/activity_profile_creating.xml" value="0.24010416666666667" />
+        <entry key="..\:/Users/mohit/AndroidStudioProjects/First/app/src/main/res/layout/activity_splash.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/mohit/AndroidStudioProjects/First/app/src/main/res/layout/activity_under_weight.xml" value="0.24010416666666667" />
+        <entry key="..\:/Users/mohit/AndroidStudioProjects/First/app/src/main/res/layout/activity_update_profile.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/mohit/AndroidStudioProjects/First/app/src/main/res/layout/activity_web_view.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/mohit/AndroidStudioProjects/First/app/src/main/res/menu/menu_items.xml" value="0.25416666666666665" />
       </map>
