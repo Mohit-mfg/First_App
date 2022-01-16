@@ -93,7 +93,7 @@
             app:counterEnabled="true"
             app:counterMaxLength="50"
             app:counterTextColor="@color/text_red"
-            app:prefixText="+91"
+
             app:prefixTextColor="@color/text_red"
             android:layout_marginTop="10dp"
             >
@@ -103,7 +103,7 @@
                 android:id="@+id/et_emai_id"
                 android:textCursorDrawable="@color/teal_700"
                 android:maxLength="50"
-                android:inputType="number"
+                android:inputType="textEmailAddress"
                 />
         </com.google.android.material.textfield.TextInputLayout>
 

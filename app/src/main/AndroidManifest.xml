@@ -55,7 +55,7 @@
             android:name=".BMI_Explain"
             android:exported="false" />
         <activity
-            android:name=".MainActivity2"
+            android:name=".ShowDeatail"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

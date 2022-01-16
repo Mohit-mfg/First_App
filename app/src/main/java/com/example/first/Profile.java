@@ -1,6 +1,7 @@
 package com.example.first;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -17,7 +18,7 @@ public class Profile extends AppCompatActivity {
     Context context=Profile.this;
     String name,email,mob_number;
     Boolean detail_check;
-    int p_check;
+
 
     private SharedPreferences preferences;
     private SharedPreferences.Editor editor;
@@ -38,20 +39,35 @@ public class Profile extends AppCompatActivity {
                 email=binding.etEmaiId.getEditableText().toString();
                 mob_number=binding.etMobNumber.getEditableText().toString();
 
-                editor.putString(Constants.NAME,name);
-                editor.putString(Constants.Email,email);
-                editor.putString(Constants.PHONE_NO,mob_number);
-                editor.putInt(Constants.CHECK,1);
-                detail_check=editor.commit();
-                if(detail_check){
-                    p_check=1;
-                Toast.makeText(context, "Profile Create Sucessful", Toast.LENGTH_SHORT).show();}
-                else {
-                    p_check=0;
-                    Toast.makeText(context, "Profile Create Fail", Toast.LENGTH_SHORT).show();
+                if(name.isEmpty()){
+                    Toast.makeText(context, "Please check name", Toast.LENGTH_SHORT).show();
                 }
+                else if(email.isEmpty()){
+                    Toast.makeText(context, "Please check email", Toast.LENGTH_SHORT).show();
 
+                }
+                else if(mob_number.isEmpty()){
+                    Toast.makeText(context, "Please check Number", Toast.LENGTH_SHORT).show();
 
+                }
+            else {
+                    editor.putString(Constants.NAME, name);
+                    editor.putString(Constants.Email, email);
+                    editor.putString(Constants.PHONE_NO, mob_number);
+                    editor.putInt(Constants.CHECK, 1);
+                    detail_check = editor.commit();
+                    if (detail_check) {
+
+                        Toast.makeText(context, "Profile Create Sucessful", Toast.LENGTH_SHORT).show();
+
+                        startActivity(new Intent(context, Profile_Creating.class));
+                        finish();
+                    } else {
+
+                        Toast.makeText(context, "Profile Create Fail", Toast.LENGTH_SHORT).show();
+                    }
+
+                }
             }
         });
 

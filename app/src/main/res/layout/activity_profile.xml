@@ -76,7 +76,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/et_mob_number"
                 android:textCursorDrawable="@color/teal_700"
-                android:maxLength="10"
+                android:maxLength="13"
                 android:inputType="number"
                 />
         </com.google.android.material.textfield.TextInputLayout>
@@ -93,7 +93,7 @@
             app:counterEnabled="true"
             app:counterMaxLength="50"
             app:counterTextColor="@color/text_red"
-            app:prefixText="+91"
+
             app:prefixTextColor="@color/text_red"
             android:layout_marginTop="10dp"
             >

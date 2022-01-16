@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/relative_layout_id"
     tools:context=".Profile_Creating">
 
 <!--    <TextView-->
@@ -32,7 +33,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="20dp"
-            android:background="@color/white" />
+             />
 
         <LinearLayout
             android:id="@+id/ll_3"
@@ -189,20 +190,7 @@
 
                 />
 
-            <Button
-                android:padding="5dp"
-                android:id="@+id/back_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_weight="1"
-                android:background="@color/teal_200"
-                android:gravity="center"
-                android:text="Back"
-                android:textSize="18sp"
 
-                />
 
         </LinearLayout>
 
