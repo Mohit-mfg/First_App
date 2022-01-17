@@ -13,7 +13,6 @@ import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,13 +32,9 @@ public class MainActivity extends AppCompatActivity  {
     TextView tv_Result,tv_show_details;
     String str,str_result,gender;
    Context context=MainActivity.this;
-   int check=0;
 
-   String unit[]=new String[]{"Metric Units","US Units"};
-   String spiner_item;
    int s_check;
 
-   RadioGroup radioGroup;
 
     float weight ,height,result;
     double feet,inches,pound,rslt;
@@ -56,7 +51,9 @@ public class MainActivity extends AppCompatActivity  {
         Intent intent=getIntent();
          s_check=Integer.valueOf(intent.getStringExtra("s_check"));
          gender=intent.getStringExtra("gender");
-        Toast.makeText(context,String.valueOf(s_check), Toast.LENGTH_SHORT).show();
+
+
+//        Toast.makeText(context,String.valueOf(s_check), Toast.LENGTH_SHORT).show();
 
 //        ArrayAdapter<String> adapter=new ArrayAdapter<>(context, android.R.layout.simple_list_item_1,unit);
 //        binding.spinerId.setAdapter(adapter);
@@ -124,32 +121,15 @@ public class MainActivity extends AppCompatActivity  {
                 else if(et_weight.getText().toString().isEmpty()){
                     Toast.makeText(MainActivity.this, "please check weight", Toast.LENGTH_SHORT).show();
                 }
-//                else if(check==0){
-//
-//                    Toast.makeText(context, "please check Gender", Toast.LENGTH_SHORT).show();
-//
-//
-//
-//                }
+
                 else {
                     height= Float.parseFloat(et_height.getText().toString());
                     weight= Float.parseFloat(et_weight.getText().toString());
 
-//                    pound=Float.parseFloat(binding.etPoundId.getText().toString());
-//                    feet=Float.parseFloat(binding.etFeetId.getText().toString());
-
-//                    if(s_check==0){
                         height = height / 100;
 
                         result = weight / (height * height);
-//                    }
-//                    else if(s_check==1){
-//                        pound=pound*0.453592;
-//                        feet=feet/3.281;
-//                        rslt=pound/(feet*feet);
-//                        result= (float) rslt;
-//
-//                    }
+
 
 
 
@@ -189,28 +169,17 @@ public class MainActivity extends AppCompatActivity  {
                     }
 
                     else {
-//                        height= Float.parseFloat(et_height.getText().toString());
-//                        weight= Float.parseFloat(et_weight.getText().toString());
-
                         pound=Float.parseFloat(binding.etPoundId.getText().toString());
                         feet=Float.parseFloat(binding.etFeetId.getText().toString());
                         inches=((Float.parseFloat(binding.etInchId.getText().toString()))/12);
                         feet=feet+inches;
                         Toast.makeText(context, String.valueOf(feet), Toast.LENGTH_LONG).show();
 
-//                        if(s_check==0){
-//                            height = height / 100;
-//
-//                            result = weight / (height * height);
-//                        }
-//                        else if(s_check==1){
                             pound=pound*0.453592;
                             feet=feet/3.281;
                             rslt=pound/(feet*feet);
                             result= (float) rslt;
 
-
-//                        }
 
 
 
@@ -232,11 +201,6 @@ public class MainActivity extends AppCompatActivity  {
                         tv_Result.setVisibility(View.VISIBLE);
 
                         tv_show_details.setVisibility(View.VISIBLE);
-
-
-
-
-
 
                     }
                 }
@@ -347,25 +311,6 @@ public class MainActivity extends AppCompatActivity  {
     }
 
 
-
-//    @Override
-//    public void onCheckedChanged(RadioGroup radioGroup, int i) {
-//        int id=radioGroup.getCheckedRadioButtonId();
-//        RadioButton radioButton=findViewById(id);
-//        if(radioButton.getText().toString().isEmpty()){
-//            check=0;
-//        }
-//        else {
-//            check=1;
-//        }
-//
-//        hideSoftKeyboard(this.getCurrentFocus());
-//
-//        gender=radioButton.getText().toString();
-//        Toast.makeText(context, radioButton.getText().toString(), Toast.LENGTH_SHORT).show();
-//
-//
-//    }
     public void hideSoftKeyboard(View view) {
         if (view == null) {
             view = this.getCurrentFocus();
@@ -379,38 +324,4 @@ public class MainActivity extends AppCompatActivity  {
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
     }
 
-//    @Override
-//    public void onBackPressed() {
-//
-//
-//       // super.onBackPressed();
-//        AlertDialog.Builder builder=new AlertDialog.Builder(context);
-//        builder.setTitle("Alert Dialog Box");
-//        builder.setMessage("Do You want to Exit");
-//        builder.setCancelable(false);
-//
-//        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
-//            @Override
-//            public void onClick(DialogInterface dialogInterface, int i) {
-//
-//
-//
-//
-//            }
-//        });
-//        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-//            @Override
-//            public void onClick(DialogInterface dialogInterface, int i) {
-//
-//                cancel();
-//
-//            }
-//        });
-//
-//        builder.show();
-//    }
-//
-//    private void cancel() {
-//        super.onBackPressed();
-//    }
 }

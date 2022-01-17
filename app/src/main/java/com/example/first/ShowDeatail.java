@@ -35,19 +35,17 @@ Context context= ShowDeatail.this;
         Toast.makeText(context, intent.getStringExtra(Constants.NAME)+"name", Toast.LENGTH_SHORT).show();
         int s_check=Integer.valueOf(intent.getStringExtra("s_check"));
         if(s_check==0){
+
         binding.heightId.setText((intent.getStringExtra("height"))+" cm");
         binding.weightId.setText((intent.getStringExtra("weight"))+" kg");
         detail(intent);
-//        binding.bmiResult.setText(intent.getStringExtra("str_result"));
-//        binding.genderId.setText(intent.getStringExtra("gender"));
+
         }
         else if(s_check==1){
 
             binding.heightId.setText((intent.getStringExtra("feet"))+" feet");
             binding.weightId.setText((intent.getStringExtra("pound"))+" pound");
             detail(intent);
-//            binding.bmiResult.setText(intent.getStringExtra("str_result"));
-//            binding.genderId.setText(intent.getStringExtra("gender"));
 
         }
 
@@ -56,8 +54,6 @@ Context context= ShowDeatail.this;
 
     }
     public void detail(Intent intent){
-
-
 
         if(preferences.getString(Constants.NAME,null)==null){
 

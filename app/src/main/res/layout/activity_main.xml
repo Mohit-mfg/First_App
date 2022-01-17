@@ -49,35 +49,6 @@
             android:layout_marginTop="20dp"
             android:orientation="horizontal"
             android:visibility="gone">
-
-            <!--            <RadioGroup-->
-            <!--                android:id="@+id/radio_group"-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:layout_below="@+id/et_mt_2"-->
-            <!--                android:layout_marginLeft="20dp"-->
-            <!--                android:layout_marginRight="20dp"-->
-            <!--                android:orientation="horizontal"-->
-            <!--                android:weightSum="2">-->
-
-            <!--                <RadioButton-->
-            <!--                    android:id="@+id/male_id"-->
-            <!--                    android:layout_width="wrap_content"-->
-            <!--                    android:layout_height="wrap_content"-->
-            <!--                    android:layout_weight="1"-->
-            <!--                    android:text="@string/male"-->
-            <!--                    android:textSize="18sp" />-->
-
-            <!--                <RadioButton-->
-            <!--                    android:id="@+id/female"-->
-            <!--                    android:layout_width="wrap_content"-->
-            <!--                    android:layout_height="wrap_content"-->
-            <!--                    android:layout_weight="1"-->
-            <!--                    android:text="@string/female"-->
-            <!--                    android:textSize="18sp" />-->
-
-
-            <!--            </RadioGroup>-->
         </LinearLayout>
 
 
@@ -283,58 +254,6 @@
 
 
 
-                    <!--                    <com.google.android.material.textfield.TextInputLayout-->
-<!--                        android:id="@+id/et_mt_1"-->
-<!--                        -->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_marginLeft="20dp"-->
-<!--                        android:layout_marginRight="20dp"-->
-<!--                        android:layout_weight="1"-->
-<!--                        android:background="@color/white"-->
-<!--                        android:hint="Feet">-->
-
-<!--                        <EditText-->
-<!--                            android:layout_marginLeft="20dp"-->
-<!--                            android:layout_width="match_parent"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:background="@color/white"-->
-<!--                            android:inputType="numberDecimal"-->
-<!--                            android:padding="3dp"-->
-<!--                            android:textColor="@color/black"-->
-<!--                            android:textSize="@dimen/text_size"-->
-<!--                            android:textStyle="bold">-->
-
-<!--                        </EditText>-->
-<!--                    </com.google.android.material.textfield.TextInputLayout>-->
-
-<!--                    <com.google.android.material.textfield.TextInputLayout-->
-<!--                        android:id="@+id/et_mt_3"-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                       -->
-<!--                        android:layout_weight="1"-->
-<!--                        android:background="@color/white"-->
-<!--                        android:hint="Inch">-->
-
-<!--                        <EditText-->
-<!--                            android:id="@+id/et_inch_id"-->
-<!--                            android:layout_width="match_parent"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            -->
-
-<!--                            android:background="@color/white"-->
-
-<!--                            android:inputType="numberDecimal"-->
-<!--                            android:padding="3dp"-->
-<!--                            android:textColor="@color/black"-->
-<!--                            android:textSize="@dimen/text_size"-->
-<!--                            android:textStyle="bold">-->
-
-<!--                        </EditText>-->
-<!--                    </com.google.android.material.textfield.TextInputLayout>-->
-
-
                 </LinearLayout>
 
 
@@ -443,94 +362,7 @@
 
 
     </RelativeLayout>
-<!--    <LinearLayout-->
-<!--        android:id="@+id/l1"-->
-<!--        android:layout_marginLeft="10dp"-->
-<!--        android:layout_marginRight="10dp"-->
-<!--        android:orientation="vertical"-->
-<!--        android:layout_marginBottom="10dp"-->
-<!--        android:layout_alignParentBottom="true"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:weightSum="4">-->
 
-<!--        <TextView-->
-<!--            android:layout_marginRight="2dp"-->
-<!--            android:layout_marginLeft="2dp"-->
-<!--            android:layout_weight="1"-->
-<!--            android:textSize="@dimen/text_size"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="Under weight"-->
-<!--            android:textColor="@color/teal_700"/>-->
-<!--        <TextView-->
-<!--            android:layout_marginRight="2dp"-->
-<!--            android:layout_weight="1"-->
-<!--            android:textSize="@dimen/text_size"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="Normal"-->
-<!--            android:textColor="@color/teal_700"/>-->
-<!--        <TextView-->
-<!--            android:layout_marginRight="2dp"-->
-<!--            android:layout_weight="1"-->
-<!--            android:textSize="@dimen/text_size"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="Over weight"-->
-<!--            android:textColor="@color/teal_700"/>-->
-<!--        <TextView-->
-<!--            android:layout_marginRight="2dp"-->
-<!--            android:layout_weight="1"-->
-<!--            android:textSize="@dimen/text_size"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="Obese"-->
-<!--            android:textColor="@color/teal_700"/>-->
-<!--    </LinearLayout>-->
-<!--    <LinearLayout-->
-<!--        android:layout_toRightOf="@+id/l1"-->
-<!--        android:orientation="vertical"-->
-<!--        android:layout_marginBottom="10dp"-->
-<!--        android:layout_alignParentBottom="true"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:weightSum="4">-->
-
-<!--        <TextView-->
-<!--            android:layout_marginRight="2dp"-->
-<!--            android:layout_marginLeft="2dp"-->
-<!--            android:layout_weight="1"-->
-<!--            android:textSize="@dimen/text_size"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="@string/under_weight"-->
-<!--            android:textColor="@color/teal_700"/>-->
-<!--        <TextView-->
-<!--            android:layout_marginRight="2dp"-->
-<!--            android:layout_weight="1"-->
-<!--            android:textSize="@dimen/text_size"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="18.5 - 25"-->
-<!--            android:textColor="@color/teal_700"/>-->
-<!--        <TextView-->
-<!--            android:layout_marginRight="2dp"-->
-<!--            android:layout_weight="1"-->
-<!--            android:textSize="@dimen/text_size"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="25 - 30"-->
-<!--            android:textColor="@color/teal_700"/>-->
-<!--        <TextView-->
-<!--            android:layout_marginRight="2dp"-->
-<!--            android:layout_weight="1"-->
-<!--            android:textSize="@dimen/text_size"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="> 30"-->
-<!--            android:textColor="@color/teal_700"/>-->
-<!--    </LinearLayout>-->
     <Button
         android:id="@+id/back_btn"
         android:layout_width="wrap_content"
